@@ -29,4 +29,8 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           user_name: AakritiMarketing
+<<<<<<< HEAD
           user_email: your-email@example.com
+=======
+          user_email: your-email@example.com
+>>>>>>> d01d01592af54d1c564443a3e6d8901f99765ce7
