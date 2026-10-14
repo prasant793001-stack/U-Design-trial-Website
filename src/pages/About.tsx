@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { withBasePath } from '../lib/sitePaths'
 
 export default function About() {
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -27,7 +28,7 @@ export default function About() {
       <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/site-media/about-bg-1.jpg"
+            src={withBasePath('/site-media/about-bg-1.jpg')}
             alt="About U-Design"
             className="w-full h-full object-cover"
           />
@@ -81,7 +82,7 @@ export default function About() {
             <div className="reveal-on-scroll" style={{ transitionDelay: '100ms' }}>
               <div className="rounded-2xl overflow-hidden">
                 <img
-                  src="/site-media/about-bg-2.jpg"
+                  src={withBasePath('/site-media/about-bg-2.jpg')}
                   alt="Team collaboration"
                   className="w-full h-80 object-cover"
                 />
@@ -171,7 +172,7 @@ export default function About() {
             <div className="reveal-on-scroll" style={{ transitionDelay: '100ms' }}>
               <div className="rounded-2xl overflow-hidden">
                 <img
-                  src="/site-media/about-bg-3.jpg"
+                  src={withBasePath('/site-media/about-bg-3.jpg')}
                   alt="Creative workspace"
                   className="w-full h-80 object-cover"
                 />

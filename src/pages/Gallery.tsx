@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { withBasePath } from '../lib/sitePaths'
 
 export default function Gallery() {
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -23,16 +24,16 @@ export default function Gallery() {
 
   // Sample gallery images - these are inspirational/sample only, not client work
   const galleryImages = [
-    { src: "/site-media/service-boutique-1.jpg", alt: "Boutique Design Sample" },
-    { src: "/site-media/service-boutique-2.jpg", alt: "Creative Workspace Sample" },
-    { src: "/site-media/service-boutique-3.jpg", alt: "Social Media Content Sample" },
-    { src: "/site-media/service-real-estate-2.jpg", alt: "Real Estate Design Sample" },
-    { src: "/site-media/service-real-estate-3.jpg", alt: "Real Estate Marketing Sample" },
-    { src: "/site-media/service-restaurant-2.jpg", alt: "Restaurant Design Sample" },
-    { src: "/site-media/about-bg-1.jpg", alt: "About Page Sample" },
-    { src: "/site-media/about-bg-2.jpg", alt: "Modern Workspace Sample" },
-    { src: "/site-media/about-bg-3.jpg", alt: "Workspace Sample" },
-    { src: "/site-media/about-bg-4.jpg", alt: "Creative Process Sample" }
+    { src: withBasePath("/site-media/service-boutique-1.jpg"), alt: "Boutique Design Sample" },
+    { src: withBasePath("/site-media/service-boutique-2.jpg"), alt: "Creative Workspace Sample" },
+    { src: withBasePath("/site-media/service-boutique-3.jpg"), alt: "Social Media Content Sample" },
+    { src: withBasePath("/site-media/service-real-estate-2.jpg"), alt: "Real Estate Design Sample" },
+    { src: withBasePath("/site-media/service-real-estate-3.jpg"), alt: "Real Estate Marketing Sample" },
+    { src: withBasePath("/site-media/service-restaurant-2.jpg"), alt: "Restaurant Design Sample" },
+    { src: withBasePath("/site-media/about-bg-1.jpg"), alt: "About Page Sample" },
+    { src: withBasePath("/site-media/about-bg-2.jpg"), alt: "Modern Workspace Sample" },
+    { src: withBasePath("/site-media/about-bg-3.jpg"), alt: "Workspace Sample" },
+    { src: withBasePath("/site-media/about-bg-4.jpg"), alt: "Creative Process Sample" }
   ]
 
   return (
@@ -41,7 +42,7 @@ export default function Gallery() {
       <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/site-media/about-bg-1.jpg"
+            src={withBasePath('/site-media/about-bg-1.jpg')}
             alt="Gallery"
             className="w-full h-full object-cover"
           />

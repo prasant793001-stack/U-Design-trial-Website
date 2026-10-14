@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { withBasePath } from '../lib/sitePaths'
 
 type HeaderProps = {
   itemCount: number
@@ -31,12 +32,12 @@ export default function Header({ itemCount, onOpenCart }: HeaderProps) {
   }, [mobileMenuOpen])
 
   const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
-    { href: '/services', label: 'Services' },
-    { href: '/shop', label: 'Shop' },
-    { href: '/gallery', label: 'Gallery' },
-    { href: '/contact', label: 'Contact' }
+    { href: withBasePath('/'), label: 'Home' },
+    { href: withBasePath('/about'), label: 'About' },
+    { href: withBasePath('/services'), label: 'Services' },
+    { href: withBasePath('/shop'), label: 'Shop' },
+    { href: withBasePath('/gallery'), label: 'Gallery' },
+    { href: withBasePath('/contact'), label: 'Contact' }
   ]
 
   return (
@@ -49,10 +50,10 @@ export default function Header({ itemCount, onOpenCart }: HeaderProps) {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo */}
           <a
-            href="/"
+            href={withBasePath('/')}
             className="flex items-center gap-3 font-display text-xl text-[#f5f1ea] transition-colors hover:text-[#e5b769] md:text-2xl"
           >
-            <img src="/logo.svg" alt="" aria-hidden="true" className="h-10 w-10" width="40" height="40" />
+            <img src={withBasePath('/logo.svg')} alt="" aria-hidden="true" className="h-10 w-10" width="40" height="40" />
             <span>U-Design</span>
           </a>
 

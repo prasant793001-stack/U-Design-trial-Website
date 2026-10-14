@@ -1,3 +1,11 @@
+# U-Design
+
+## GitHub Pages
+
+The workflow in `.github/workflows/deploy.yml` builds the site with Node.js 22 and publishes the `dist` directory whenever changes are pushed to `main`.
+
+Before the first run, set the repository's Pages source to **GitHub Actions** under **Settings > Pages > Build and deployment**. The project site URL is `https://prasant793001-stack.github.io/U-Design-trial-Website/`.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.

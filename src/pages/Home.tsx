@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { withBasePath } from '../lib/sitePaths'
 
 export default function Home() {
   const heroRef = useRef<HTMLDivElement>(null)
@@ -32,7 +33,7 @@ export default function Home() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/site-media/hero-video-1.mp4" type="video/mp4" />
+          <source src={withBasePath('/site-media/hero-video-1.mp4')} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-[#0a0a0a]/90" />
         
@@ -49,7 +50,7 @@ export default function Home() {
           </div>
           <div className="reveal-on-scroll mt-12" style={{ transitionDelay: '200ms' }}>
             <a
-              href="/contact"
+              href={withBasePath('/contact')}
               className="inline-block px-10 py-4 bg-[#e5b769] text-[#0a0a0a] font-display text-xl rounded-full hover:bg-[#d4a058] transition-colors transform hover:scale-105"
             >
               Get Started
@@ -78,7 +79,7 @@ export default function Home() {
             <div className="reveal-on-scroll">
               <div className="rounded-2xl overflow-hidden">
                 <img
-                  src="/site-media/about-bg-1.jpg"
+                  src={withBasePath('/site-media/about-bg-1.jpg')}
                   alt="Creative workspace"
                   className="w-full h-80 object-cover"
                 />
@@ -127,7 +128,7 @@ export default function Home() {
               </p>
               <div className="mt-6 rounded-xl overflow-hidden">
                 <img
-                  src="/site-media/service-boutique-1.jpg"
+                  src={withBasePath('/site-media/service-boutique-1.jpg')}
                   alt="Social media content creation"
                   className="w-full h-40 object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
                 />
@@ -147,7 +148,7 @@ export default function Home() {
               </p>
               <div className="mt-6 rounded-xl overflow-hidden">
                 <img
-                  src="/site-media/service-boutique-2.jpg"
+                  src={withBasePath('/site-media/service-boutique-2.jpg')}
                   alt="Content creation and design"
                   className="w-full h-40 object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
                 />
@@ -167,7 +168,7 @@ export default function Home() {
               </p>
               <div className="mt-6 rounded-xl overflow-hidden">
                 <img
-                  src="/site-media/service-real-estate-2.jpg"
+                  src={withBasePath('/site-media/service-real-estate-2.jpg')}
                   alt="SEO analytics dashboard"
                   className="w-full h-40 object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
                 />
@@ -187,7 +188,7 @@ export default function Home() {
               </p>
               <div className="mt-6 rounded-xl overflow-hidden">
                 <img
-                  src="/site-media/service-restaurant-2.jpg"
+                  src={withBasePath('/site-media/service-restaurant-2.jpg')}
                   alt="Email marketing campaigns"
                   className="w-full h-40 object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
                 />
@@ -207,7 +208,7 @@ export default function Home() {
               </p>
               <div className="mt-6 rounded-xl overflow-hidden">
                 <img
-                  src="/site-media/service-boutique-3.jpg"
+                  src={withBasePath('/site-media/service-boutique-3.jpg')}
                   alt="Influencer collaboration"
                   className="w-full h-40 object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
                 />
@@ -227,7 +228,7 @@ export default function Home() {
               </p>
               <div className="mt-6 rounded-xl overflow-hidden">
                 <img
-                  src="/site-media/service-real-estate-3.jpg"
+                  src={withBasePath('/site-media/service-real-estate-3.jpg')}
                   alt="Custom AI solutions for boutique businesses"
                   className="w-full h-40 object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
                 />

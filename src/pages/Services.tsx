@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { withBasePath } from '../lib/sitePaths'
 
 export default function Services() {
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -30,7 +31,7 @@ export default function Services() {
       ),
       title: "Social Media Management",
       description: "AI-powered content creation, scheduling, and engagement strategies that grow your audience and drive conversions.",
-      image: "/site-media/service-boutique-1.jpg"
+      image: withBasePath("/site-media/service-boutique-1.jpg")
     },
     {
       icon: (
@@ -40,7 +41,7 @@ export default function Services() {
       ),
       title: "Content Creation",
       description: "Engaging visuals, copy, and video content that tells your brand's story and resonates with your target audience.",
-      image: "/site-media/service-boutique-2.jpg"
+      image: withBasePath("/site-media/service-boutique-2.jpg")
     },
     {
       icon: (
@@ -50,7 +51,7 @@ export default function Services() {
       ),
       title: "SEO & Analytics",
       description: "Data-driven optimization that improves your search rankings and provides actionable insights for growth.",
-      image: "/site-media/service-real-estate-2.jpg"
+      image: withBasePath("/site-media/service-real-estate-2.jpg")
     },
     {
       icon: (
@@ -60,7 +61,7 @@ export default function Services() {
       ),
       title: "Email Marketing",
       description: "Automated email campaigns that nurture leads and retain customers with personalized messaging.",
-      image: "/site-media/service-restaurant-2.jpg"
+      image: withBasePath("/site-media/service-restaurant-2.jpg")
     },
     {
       icon: (
@@ -70,7 +71,7 @@ export default function Services() {
       ),
       title: "Influencer Marketing",
       description: "Strategic partnerships with UAE influencers who authentically promote your brand to their engaged followers.",
-      image: "/site-media/service-boutique-3.jpg"
+      image: withBasePath("/site-media/service-boutique-3.jpg")
     },
     {
       icon: (
@@ -80,7 +81,7 @@ export default function Services() {
       ),
       title: "Custom Solutions",
       description: "Every business is different. We tailor AI solutions to your specific needs, industry, and goals. No cookie-cutter approaches.",
-      image: "/site-media/service-real-estate-3.jpg"
+      image: withBasePath("/site-media/service-real-estate-3.jpg")
     }
   ]
 
@@ -90,7 +91,7 @@ export default function Services() {
       <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/site-media/about-bg-1.jpg"
+            src={withBasePath('/site-media/about-bg-1.jpg')}
             alt="Services"
             className="w-full h-full object-cover"
           />

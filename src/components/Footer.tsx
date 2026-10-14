@@ -1,3 +1,5 @@
+import { withBasePath } from '../lib/sitePaths'
+
 export default function Footer() {
   return (
     <footer
@@ -18,10 +20,10 @@ export default function Footer() {
             {/* Brand */}
             <div className="md:col-span-2">
               <a
-                href="/"
+                href={withBasePath('/')}
                 className="mb-6 inline-flex items-center gap-3 font-display text-3xl text-[#f5f1ea] transition-colors hover:text-[#e5b769]"
               >
-                <img src="/logo.svg" alt="" aria-hidden="true" className="h-12 w-12" width="48" height="48" />
+                <img src={withBasePath('/logo.svg')} alt="" aria-hidden="true" className="h-12 w-12" width="48" height="48" />
                 <span>U-Design</span>
               </a>
               <p className="text-[#a0967a] max-w-md leading-relaxed">
@@ -36,7 +38,7 @@ export default function Footer() {
               <ul className="space-y-4">
                 <li>
                   <a
-                    href="/"
+                    href={withBasePath('/')}
                     className="text-[#a0967a] hover:text-[#e5b769] transition-colors"
                   >
                     Home
@@ -44,7 +46,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="/about"
+                    href={withBasePath('/about')}
                     className="text-[#a0967a] hover:text-[#e5b769] transition-colors"
                   >
                     About
@@ -52,7 +54,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="/services"
+                    href={withBasePath('/services')}
                     className="text-[#a0967a] hover:text-[#e5b769] transition-colors"
                   >
                     Services
@@ -60,7 +62,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="/shop"
+                    href={withBasePath('/shop')}
                     className="text-[#a0967a] hover:text-[#e5b769] transition-colors"
                   >
                     Shop
@@ -68,7 +70,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="/gallery"
+                    href={withBasePath('/gallery')}
                     className="text-[#a0967a] hover:text-[#e5b769] transition-colors"
                   >
                     Gallery
@@ -76,7 +78,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="/contact"
+                    href={withBasePath('/contact')}
                     className="text-[#a0967a] hover:text-[#e5b769] transition-colors"
                   >
                     Contact

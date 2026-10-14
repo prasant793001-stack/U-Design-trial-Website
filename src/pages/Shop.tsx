@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { withBasePath } from '../lib/sitePaths'
 import type { Product } from '../data/products'
 
 type ShopProps = {
@@ -30,7 +31,7 @@ export default function Shop({ products, addToCart }: ShopProps) {
     <div className="bg-[#0a0a0a] text-[#f5f1ea] font-body">
       <section className="relative min-h-[65vh] flex items-center justify-center overflow-hidden">
         <img
-          src="/site-media/about-bg-1.jpg"
+          src={withBasePath('/site-media/about-bg-1.jpg')}
           alt=""
           aria-hidden="true"
           className="absolute inset-0 h-full w-full object-cover"
@@ -86,7 +87,7 @@ export default function Shop({ products, addToCart }: ShopProps) {
 
           <div className="mt-16 text-center">
             <a
-              href="/contact"
+              href={withBasePath('/contact')}
               className="inline-flex rounded-full border border-[#e5b769] px-8 py-3 font-display text-lg text-[#e5b769] transition-colors hover:bg-[#e5b769]/10"
             >
               Ask about a service

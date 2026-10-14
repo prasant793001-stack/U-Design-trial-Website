@@ -1,9 +1,11 @@
+import { withBasePath } from '../lib/sitePaths'
+
 export default function Contact() {
   return (
     <div className="min-h-[70vh] bg-[#0a0a0a] px-6 py-24 text-[#f5f1ea] font-body">
       <section className="relative mx-auto max-w-5xl overflow-hidden rounded-3xl border border-[#e5b769]/20 px-8 py-20 text-center md:px-16">
         <img
-          src="/site-media/about-bg-1.jpg"
+          src={withBasePath('/site-media/about-bg-1.jpg')}
           alt=""
           aria-hidden="true"
           className="absolute inset-0 h-full w-full object-cover opacity-20"
@@ -28,7 +30,7 @@ export default function Contact() {
           </a>
           <p className="mt-4 text-sm text-[#a0967a]">@aakriti.design</p>
 
-          <a href="/services" className="mt-12 inline-block text-[#e5b769] underline-offset-4 hover:underline">
+          <a href={withBasePath('/services')} className="mt-12 inline-block text-[#e5b769] underline-offset-4 hover:underline">
             Explore our services
           </a>
         </div>

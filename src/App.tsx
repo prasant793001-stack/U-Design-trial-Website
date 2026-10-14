@@ -8,6 +8,7 @@ import Contact from './pages/Contact'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import { DEMO_PRODUCTS, type CartItem, type Product } from './data/products'
+import { getRouteFromPathname } from './lib/sitePaths'
 import './App.css'
 
 function loadCart(): CartItem[] {
@@ -126,13 +127,11 @@ function App() {
   const cartTotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0)
   const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0)
 
-  // Hash-based routing
-  const getCurrentRoute = () => window.location.pathname.replace(/\/+$/, '') || '/'
-  const [currentRoute, setCurrentRoute] = useState(getCurrentRoute)
+  const [currentRoute, setCurrentRoute] = useState(() => getRouteFromPathname(window.location.pathname))
 
   useEffect(() => {
     const handlePopState = () => {
-      setCurrentRoute(getCurrentRoute())
+      setCurrentRoute(getRouteFromPathname(window.location.pathname))
       window.scrollTo({ top: 0, behavior: 'auto' })
     }
 
