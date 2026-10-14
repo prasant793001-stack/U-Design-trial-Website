@@ -15,7 +15,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20.19.0
+
+      # Use a version supported by Vite 8: 20.19+ or 22.12+
+      # https://vitejs.dev/guide/upgrade-notes.html#nodejs-support
 
       - name: Install dependencies
         run: npm install
@@ -29,8 +32,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           user_name: AakritiMarketing
-<<<<<<< HEAD
           user_email: your-email@example.com
-=======
-          user_email: your-email@example.com
->>>>>>> d01d01592af54d1c564443a3e6d8901f99765ce7
