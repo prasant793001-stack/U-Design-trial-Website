@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #e5b769;
+  --color-ink: #0a0a0a;
+  --color-sand: #f5f1ea;
+  --color-saffron: #c9a96e;
+  --color-terracotta: #c0562f;
+  --font-display: "Bebas Neue", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+/* Film grain overlay */
+body::after {
+  content: "";
+  position: fixed;
+  inset: -50%;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.07;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain 1s steps(6) infinite;
+}
+
+@keyframes grain {
+  to { transform: translate(-10%, 5%); }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom cursor torch effect */
+.cursor-torch {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  transition: opacity 0.3s ease;
+}
+
+.cursor-torch.hidden {
+  opacity: 0;
+}
+
+/* Loader */
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: #0a0a0a;
+  display: grid;
+  place-items: center;
+}
+
+.loader-bar {
+  width: 40vw;
+  height: 2px;
+  background: var(--color-brand);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+/* Aurora background */
+.aurora {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  filter: blur(80px) saturate(140%);
+}
+
+.aurora span {
+  position: absolute;
+  width: 50vmax;
+  height: 50vmax;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  opacity: 0.55;
+  animation: float 18s ease-in-out infinite alternate;
+}
+
+.aurora span:nth-child(1) {
+  background: #ff3cac;
+  top: -10%;
+  left: -10%;
+}
+
+.aurora span:nth-child(2) {
+  background: #2b86c5;
+  bottom: -20%;
+  right: -10%;
+  animation-delay: -6s;
+}
+
+.aurora span:nth-child(3) {
+  background: #00f0ff;
+  top: 30%;
+  left: 40%;
+  animation-delay: -12s;
+}
+
+@keyframes float {
+  to { transform: translate(10vw, -8vh) scale(1.2); }
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .cursor-torch,
+  .aurora,
+  body::after {
+    display: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal-on-scroll:not(.visible),
+  .reveal-on-scroll.visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .service-card,
+  .service-card:hover {
+    transform: none;
+    transition: none;
+    box-shadow: none;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .cursor-torch {
+    display: none;
+  }
+}
+
+@media (pointer: coarse) {
+  .cursor-torch {
+    display: none;
+  }
+}
+
+/* Scroll reveal utility classes */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Parallax container */
+.parallax-section {
+  overflow: hidden;
+}
+
+.parallax-layer {
+  will-change: transform;
+}
+
+/* 3D depth treatment for imagery and cards */
+.perspective-container {
+  perspective: 1000px;
+}
+
+.perspective-container img,
+.perspective-container .glass {
+  transform-style: preserve-3d;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.perspective-container:hover img,
+.perspective-container:hover .glass {
+  transform: rotateX(2deg) rotateY(-2deg) scale(1.02);
+}
+
+/* Subtle 3D tilt on hover for service cards */
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: perspective(800px) rotateX(2deg) rotateY(-2deg) translateY(-4px) scale(1.01);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 
+              0 0 60px rgba(229, 183, 105, 0.15);
+}

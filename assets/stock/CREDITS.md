@@ -1,0 +1,15 @@
+- assets/stock/about-bg-1.jpg: Image by MagicDesk on Pixabay - https://pixabay.com/photos/office-sitting-room-executive-730681/
+- assets/stock/about-bg-2.jpg: Image by picjumbo_com on Pixabay - https://pixabay.com/photos/office-desk-smartphone-modern-865091/
+- assets/stock/about-bg-3.jpg: Image by StockSnap on Pixabay - https://pixabay.com/photos/computer-keyboard-apple-electronics-2565478/
+- assets/stock/about-bg-4.jpg: Image by JessBaileyDesign on Pixabay - https://pixabay.com/photos/notebook-desk-paper-desktop-3820634/
+- assets/stock/hero-video-1.mp4: Video by doktorkleinmusic on Pixabay - https://pixabay.com/videos/id-326417/
+- assets/stock/hero-video-2.mp4: Video by doktorkleinmusic on Pixabay - https://pixabay.com/videos/id-324706/
+- assets/stock/service-restaurant-1.jpg: Image by StockSnap on Pixabay - https://pixabay.com/photos/interior-design-tables-chairs-bar-2600879/
+- assets/stock/service-restaurant-2.jpg: Image by kapsy_31 on Pixabay - https://pixabay.com/photos/blackout-electricity-calm-1272802/
+- assets/stock/service-restaurant-3.jpg: Image by Vinotecarium on Pixabay - https://pixabay.com/photos/wine-bottle-of-wine-red-wine-cup-4813260/
+- assets/stock/service-real-estate-1.jpg: Image by dimitrisvetsikas1969 on Pixabay - https://pixabay.com/photos/residence-property-house-2219972/
+- assets/stock/service-real-estate-2.jpg: Image by ErikaWittlieb on Pixabay - https://pixabay.com/photos/house-home-property-residential-2483336/
+- assets/stock/service-real-estate-3.jpg: Image by TheDigitalArtist on Pixabay - https://pixabay.com/photos/modern-house-glass-walls-10488778/
+- assets/stock/service-boutique-1.jpg: Image by boutiquegirlish21 on Pixabay - https://pixabay.com/photos/boutique-clothing-store-fashion-6796399/
+- assets/stock/service-boutique-2.jpg: Image by Pexels on Pixabay - https://pixabay.com/photos/clothes-clothing-fashion-store-1839935/
+- assets/stock/service-boutique-3.jpg: Image by Pexels on Pixabay - https://pixabay.com/photos/apparel-boutique-bags-shoes-shop-1850804/
